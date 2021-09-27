@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Condition from './components/condition/Condition';
+import Operation from './components/operation/Operation';
+import Comment from './components/comment/Comment';
+import Checkbox from './components/checkbox/Checkbox';
+import Submit from './components/submit/Submit';
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Condition />
+      <Operation />
+      <Comment />
+      <Checkbox />
+      <Submit />
     </div>
   );
 }
