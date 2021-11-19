@@ -1,7 +1,7 @@
 import React from "react";
-import './Submit.css';
+import './button.css';
 
-export default function Submit () {
+export default function Button () {
     return (
     <div>
     <form>

@@ -1,18 +1,11 @@
 import React from "react";
 import './Checkbox.css'
 
-export default function Checkbox () {
-    return (
-    <div>
+const Checkbox = ({name}) =>
         <div>
             <input type="checkbox" />
-            <label for="scales">Снять heapdump</label>
+                <label>{name}</label>
         </div>
-        <div>
-            <input type="checkbox" />
-            <label for="scales">Снять threaddump</label>
-        </div>
-    </div>
-    )
-}
+    
+export default Checkbox;
 
