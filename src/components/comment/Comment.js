@@ -5,7 +5,7 @@ export default function Comment () {
     return (
     <div>
     <p className ="header">Комментарий:</p>
-    <textarea maxlength = "80"></textarea>
+    <textarea maxlength = "80" />
     </div>
     )
 }

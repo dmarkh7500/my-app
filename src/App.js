@@ -1,12 +1,13 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import { useDispatch } from 'react-redux';
+
 import './App.css';
 import Condition from './components/condition/Condition';
 import Operation from './components/operation/Operation';
 import Comment from './components/comment/Comment';
 import Checkbox from './components/checkbox/Checkbox';
 import Button from './components/button/button';
+import Form from './components/form/Form';
 
 
 
@@ -22,7 +23,6 @@ const operation3 = useSelector(state =>  state.operation[2].name)
 
 const handlerChange = e => {
 
-  
 }
 
 
@@ -54,7 +54,11 @@ const handlerChange = e => {
         <Checkbox name = 'Снять threaddump' />
       </div>
       <Button />
+
+      <Form />
     </div>
+    
+
   );
 }
 
