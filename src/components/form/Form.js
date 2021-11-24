@@ -1,5 +1,5 @@
 import React from 'react';  
-import './Form.css'
+import './form.css'
 import { useSelector,useDispatch} from 'react-redux';
 
 import Select from '../Select/Select';
@@ -36,7 +36,4 @@ export default function Form ()  {
             options={checkBoxValue}
             selectedOptions={checkBoxValue}
         />
-
-        </div>
-    )
-}
+        </div>)}
