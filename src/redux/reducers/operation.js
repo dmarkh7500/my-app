@@ -1,3 +1,4 @@
+import { SWITCH_OPTION } from "./types"
 const initialState =
     ['Старт', 
     'Стоп',
@@ -8,5 +9,10 @@ const initialState =
 
 
 export const operation = (state = initialState, action) => {
-    return state
-}
+    switch(action.type){
+        case SWITCH_OPTION:
+            return {...state, options: state.options.concat(action.payload)}
+
+
+    default: return state
+}}

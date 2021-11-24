@@ -1,15 +1,18 @@
 import React from 'react';  
 import './Form2.css'
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch} from 'react-redux';
 
 import Select from '../Select/Select';
 import CheckBox from '../CheckBox/CheckBox';
+import { SWITCH_OPTION } from '../../redux/reducers/types';
 
 export default function Form2 ()  {
 
-    const conditionValue = useSelector(state => state.condition);
+    const conditionValue = useSelector(state => state.condition.options);
     const operationValue = useSelector(state => state.operation);
     const checkBoxValue = useSelector(state => state.checkbox);
+
+     const dispatch = useDispatch();
     
     return(
         <div className='container'>
@@ -18,12 +21,14 @@ export default function Form2 ()  {
             name={'condition'}
             options = {conditionValue} 
             value = {conditionValue}
+            onChange = {() => dispatch(SWITCH_OPTION())}
         />
         <Select 
             title={'Операция'}
             name={'operation'}
             options = {operationValue} 
             value = {operationValue}
+            onChange = {() => dispatch(SWITCH_OPTION())}
         />
         <CheckBox
             title={""}
