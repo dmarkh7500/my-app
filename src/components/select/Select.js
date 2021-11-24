@@ -5,7 +5,7 @@ const Select = ({
     name, 
     title, 
     value, 
-    handleChange, 
+    
     placeholder,
     options}) => {
     return(
@@ -14,7 +14,7 @@ const Select = ({
             <select
               name={name}
               value={value}
-              onChange={handleChange}
+              
               >
               <option value="" disabled>{placeholder}</option>
               {options.map(option => {
