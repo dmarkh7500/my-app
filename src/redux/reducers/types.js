@@ -1,0 +1,1 @@
+export const SWITCH_OPTION = 'SWITCH_OPTION'
