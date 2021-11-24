@@ -1,13 +1,21 @@
 import React, {Component} from 'react';  
+import { useSelector } from 'react-redux';
 import "./form.css"
-import Select from '../select/Select';
-import CheckBoxx from '../checkBoxx/CheckBoxx';   
-import TextArea from '../textArea/TextArea'; 
-import Submit from '../submit/Submit'
+import Select from '../Select/Select';
+import CheckBox from '../CheckBox/CheckBox';   
+import TextArea from '../TextArea/TextArea'; 
+import Submit from '../Submit/Submit'
+
+
+
 
 class Form extends Component {  
   constructor(props) {
+    
+
     super(props);
+
+    
 
     this.state = {
       newAction: {
@@ -28,7 +36,11 @@ class Form extends Component {
     this.handleTextArea = this.handleTextArea.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
+
+    
   }
+
+
 
   handleInput(e) {
     let value = e.target.value;
@@ -81,10 +93,16 @@ class Form extends Component {
     alert( this.state.newAction.operation + ' ' + this.state.newAction.comment);
     e.preventDefault();
   }
+
+  
   
   render() {
+   
+
     return (
       <form className="container" onSubmit={this.handleFormSubmit}>
+
+          
 
        <Select 
        title={'Состояние'}
@@ -114,7 +132,7 @@ class Form extends Component {
         /> 
 
 
-        <CheckBoxx
+        <CheckBox
         title={""}
         name={"check"}
         options={this.state.checkOptions}
@@ -130,8 +148,11 @@ class Form extends Component {
         /> 
         
       </form>
+      
     );
+    
   }
+  
 }
 
 export default Form;

@@ -1,17 +1,23 @@
 import React from "react";
 import './select.css'
 
-const Select = props => {
+const Select = ({
+    name, 
+    title, 
+    value, 
+    handleChange, 
+    placeholder,
+    options}) => {
     return(
         <div className="form-group">
-            <label htmlFor={props.name}> {props.title} </label>
+            <label htmlFor={name}> {title} </label>
             <select
-              name={props.name}
-              value={props.value}
-              onChange={props.handleChange}
+              name={name}
+              value={value}
+              onChange={handleChange}
               >
-              <option value="" disabled>{props.placeholder}</option>
-              {props.options.map(option => {
+              <option value="" disabled>{placeholder}</option>
+              {options.map(option => {
                 return (
                   <option
                     key={option}
