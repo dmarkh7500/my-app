@@ -21,7 +21,7 @@ export default function Form ()  {
             name={'condition'}
             options = {conditionValue} 
             value = {conditionValue}
-            onChange = {() => dispatch(SWITCH_OPTION())}
+            handdleE = {() => dispatch({type: 'SWITCH_OPTION'})}
         />
         <Select 
             title={'Операция'}
@@ -34,6 +34,6 @@ export default function Form ()  {
             title={""}
             name={"check"}
             options={checkBoxValue}
-            selectedOptions={checkBoxValue}
+            selectedOptions={checkBoxValue} 
         />
         </div>)}

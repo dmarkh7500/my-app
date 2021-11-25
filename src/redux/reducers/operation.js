@@ -9,10 +9,11 @@ const initialState =
 
 
 export const operation = (state = initialState, action) => {
+    
     switch(action.type){
         case SWITCH_OPTION:
-            return {...state, options: state.options.concat(action.payload)}
-
+            return {...state,
+                options: [action.payload]}
 
     default: return state
 }}

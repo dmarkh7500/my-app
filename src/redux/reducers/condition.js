@@ -1,21 +1,25 @@
 import { SWITCH_OPTION } from "./types"
-
-const initialState = {
-    options: ['Запущено', 
+const initialState = 
+    ['Запущено', 
     'Остановлено',
      'Недоступно']
-}
 
 
+     console.log(3);
 
 
 export const condition = (state = initialState, action) => {
-    switch(action.type){
+    console.log(action.type)
+    switch (action.type) {
         case SWITCH_OPTION:
-            return {...state, options: state.options.concat(action.payload)}
+        console.log(4);
+            return {...state,
+                    action};
+                    
+            
+            default: return state
 
-
-    default: return state
-    }
+            }
+        }
+           
     
-}
