@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import { condition } from "./condition";
+import { conditionsDictionary } from "./conditionsDictionary";
 import { operation } from "./operation";
 import { checkbox } from "./checkbox";
+import { selectedCondition} from './selectedCondition';
 
 export const rootReducer = combineReducers({
-     condition, operation, checkbox}
+     conditionsDictionary, operation, checkbox, selectedCondition}
 )

@@ -2,9 +2,11 @@ import React from 'react';
 import './form.css'
 import { useSelector,useDispatch} from 'react-redux';
 
+
 import Select from '../Select/Select';
 import CheckBox from '../CheckBox/Checkbox';
 import { SWITCH_OPTION } from '../../redux/reducers/types';
+import {switchOption} from '../../redux/actionCreators/SwitchOption';
 
 export default function Form ()  {
 
@@ -12,7 +14,7 @@ export default function Form ()  {
     const operationValue = useSelector(state => state.operation);
     const checkBoxValue = useSelector(state => state.checkbox);
 
-     const dispatch = useDispatch();
+    const dispatch = useDispatch();
     
     return(
         <div className='container'>
@@ -21,7 +23,7 @@ export default function Form ()  {
             name={'condition'}
             options = {conditionValue} 
             value = {conditionValue}
-            handdleE = {() => dispatch({type: 'SWITCH_OPTION'})}
+            handdleE = {(event) => dispatch(switchOption(event.target.value))}
         />
         <Select 
             title={'Операция'}
@@ -36,4 +38,5 @@ export default function Form ()  {
             options={checkBoxValue}
             selectedOptions={checkBoxValue} 
         />
-        </div>)}
+        </div>)
+        };

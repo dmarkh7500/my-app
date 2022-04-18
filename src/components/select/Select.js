@@ -1,6 +1,6 @@
 import React from "react";
 import './select.css'
-console.log(2);
+
 const Select = ({
     name, 
     title, 
@@ -8,6 +8,7 @@ const Select = ({
     handdleE, 
     placeholder,
     options}) => {
+        console.log('select', options)
     return(
         
         <div className="form-group">
@@ -19,12 +20,14 @@ const Select = ({
               onChange={handdleE}
               >
               <option value="" disabled>{placeholder}</option>
+              
               {options.map(option => {
+                  
                 return (
                   <option
-                    key={option}
-                    value={option}
-                    label={option}>{option}
+                    key={option.id}
+                    value={option.title}
+                    label={option.id}>{option}
                     
                   </option>
                 );
